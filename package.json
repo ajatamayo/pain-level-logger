@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener",
+  "version": "0.1.0",
+  "description": "A NodeJS, Express, and MongoDB URL Shortening Service",
+  "main": "index.js",
+  "author": "AJ Tamayo",
+  "license": "MIT",
+  "scripts": {
+    "prepServer": "cd ./api && yarn install",
+    "runServer": "cd ./api && yarn dev",
+    "startServer": "yarn prepServer && yarn runServer",
+    "prepClient": "cd ./webclient && yarn install",
+    "runClient": "cd ./webclient && yarn start",
+    "lintClient": "cd ./webclient && yarn run eslint .",
+    "startClient": "yarn prepClient && yarn runClient"
+  }
+}
