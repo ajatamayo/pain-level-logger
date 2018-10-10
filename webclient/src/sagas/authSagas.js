@@ -26,7 +26,7 @@ export function* loginFlow({ code, uid }) {
       localStorage.setItem(REFRESH_TOKEN, refreshToken);
       yield put(loginSuccess(accessToken));
       yield put(appAlertSuccess('Login successful.'));
-      yield put(push('/dashboard'));
+      yield put(push('/'));
     } else {
       yield put(appAlertError(response.data.message));
     }
