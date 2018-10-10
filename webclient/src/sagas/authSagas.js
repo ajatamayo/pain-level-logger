@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import {
   all, call, put, takeEvery,
 } from 'redux-saga/effects';
@@ -62,7 +63,8 @@ export function* sendLoginCodeFlow({ email }) {
       yield put(appAlertError('Welp. Something aint right there. :/'));
     }
   } catch (error) {
-    yield put(appAlertError('Woops, something went wrong. :(((', error));
+    const message = get(error, 'response.data.message');
+    yield put(appAlertError(message || 'Woops, something went wrong. :((('));
   }
 }
 

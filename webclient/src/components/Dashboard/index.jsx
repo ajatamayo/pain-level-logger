@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import LoginForm from '../LoginForm';
 
 const Dashboard = () => (
-  <h1>aqwi.re url shortener</h1>
+  <Fragment>
+    <h1>aqwi.re url shortener</h1>
+    <LoginForm />
+  </Fragment>
 );
 
 export default Dashboard;

@@ -1,6 +1,6 @@
 const { sendLoginCode } = require('../../emails');
 const { BaseError, InternalServerError } = require('../../errors/systemErrors');
-const config = require('../../config');
+const { allowedEmailDomain, loginCodeExpiry } = require('../../config');
 const {
   generateHash,
   compareCodes,
@@ -17,15 +17,22 @@ const sendCode = async (req, res, next) => {
   try {
     const randomCode = await generateCode();
     const { email } = req.body;
-    const encryptedCode = await generateHash(randomCode);
-    const loginCode = await LoginCode.create({ email, encryptedCode });
-    const displayName = email.split('@')[0];
-    let user = await User.findOne({ email });
-    if (!user) {
-      user = await User.create({ email, displayName });
+
+    const idx = email.lastIndexOf('@');
+    if (idx > -1 && email.slice(idx + 1) === allowedEmailDomain) {
+      // true if the address ends with allowedEmailDomain
+      const encryptedCode = await generateHash(randomCode);
+      const loginCode = await LoginCode.create({ email, encryptedCode });
+      const displayName = email.split('@')[0];
+      let user = await User.findOne({ email });
+      if (!user) {
+        user = await User.create({ email, displayName });
+      }
+      sendLoginCode(email, randomCode, loginCode._id);
+      return res.status(200).json({ success: true, message: 'Success!', uid: loginCode._id });
     }
-    sendLoginCode(email, randomCode, loginCode._id);
-    return res.status(200).json({ success: true, message: 'Success!', uid: loginCode._id });
+
+    return res.status(400).json({ success: false, message: `Only ${allowedEmailDomain} emails may use this service.` });
   } catch (error) {
     return next(new InternalServerError(error));
   }
@@ -41,8 +48,7 @@ const login = async (req, res, next) => {
       return next(new BaseError(400, 'Wrong login code'));
     }
     const timeElapsed = (new Date() - loginCode.createdAt) / 1000;
-    const loginCodeExpiry = parseInt(config.loginCodeExpiry, 10);
-    if (timeElapsed > loginCodeExpiry) {
+    if (timeElapsed > parseInt(loginCodeExpiry, 10)) {
       return next(new BaseError(400, 'Login code expired.'));
     }
 

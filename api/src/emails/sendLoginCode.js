@@ -3,7 +3,7 @@ const config = require('../config');
 const sendEmail = require('./sendEmail');
 
 function getOptions(to, code, uid) {
-  const magicUrl = `${config.urls.client}/login/?code=${encodeURIComponent(code)}&uid=${encodeURIComponent(uid)}`;
+  const magicUrl = `${config.urls.client}/?code=${encodeURIComponent(code)}&uid=${encodeURIComponent(uid)}`;
   const content = `
     <p style="color: #4a4a4a;"><strong style="font-size: 26px;">Login</strong></p>
     <p style="color: #4a4a4a;"><a href="${magicUrl}">Click here to log in with this magic link</a></p>

@@ -11,8 +11,10 @@
     "connected-react-router": "^4.5.0",
     "history": "^4.7.2",
     "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.11",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
+    "prop-types": "^15.6.2",
     "query-string": "^6.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -83,6 +85,14 @@
         "error",
         "single"
       ],
+      "react/destructuring-assignment": [
+        0,
+        {
+          "extensions": [
+            ".jsx"
+          ]
+        }
+      ],
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
       "semi": [
@@ -93,6 +103,7 @@
   },
   "name": "url-shortener",
   "private": true,
+  "proxy": "http://localhost:5000",
   "scripts": {
     "build": "react-scripts build",
     "build-css": "node-sass src/ -o src/",
@@ -102,6 +113,5 @@
     "test": "react-scripts test --env=jsdom",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive"
   },
-  "proxy": "http://localhost:5000",
   "version": "0.1.0"
 }

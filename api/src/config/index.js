@@ -15,7 +15,7 @@ module.exports = {
     refreshTokenSecret: process.env.REFRESH_TOKEN_SECRET || 'R3fresHT0k3ns3cr3t',
     refreshTokenLife: '30d',
   },
-  allowedEmailDomains: 'qwikwire.com', // csv of domains
+  allowedEmailDomain: 'qwikwire.com',
   defaultFromEmail: '"aqwi.re" <noreply@aqwi.re>',
   app: {
     port: process.env.PORT || 5000,

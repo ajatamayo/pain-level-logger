@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Form, Icon, Input, Button } from 'antd';
+import { withRouter } from 'react-router-dom';
+import {
+  Form, Icon, Input, Button,
+} from 'antd';
 import qs from 'query-string';
+import { allowedEmailDomain } from '../../config';
 import { loginRequest, logincodeRequest } from '../../actions/authActions';
 
 const FormItem = Form.Item;
@@ -33,7 +37,7 @@ class LoginForm extends Component {
         const email = this.emailInput.input.value;
         const code = this.codeInput && this.codeInput.input.value;
         if (!this.props.uid) {
-          this.props.logincodeRequest(email);
+          this.props.logincodeRequest(`${email}@${allowedEmailDomain}`);
         } else {
           const { uid } = qs.parse(this.props.location.search);
           this.props.loginRequest(code, this.props.uid || uid);
@@ -43,6 +47,11 @@ class LoginForm extends Component {
   }
 
   render() {
+    const { isAuthenticated } = this.props;
+    if (isAuthenticated) {
+      return null;
+    }
+
     const { code, uid } = qs.parse(this.props.location.search);
     if (code && uid) {
       this.props.loginRequest(code, uid);
@@ -52,15 +61,15 @@ class LoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <h1>Login</h1>
+        <p>{`Login using your ${allowedEmailDomain} email to use this service.`}</p>
         <FormItem>
           {getFieldDecorator('email', {
             rules: [{ required: true, message: 'Please input your email!' }],
           })(<Input
             ref={this.setEmailInputRef}
             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            placeholder="you@email.com"
-            type="email"
+            placeholder="you"
+            addonAfter={allowedEmailDomain}
           />)}
         </FormItem>
         {this.props.uid && (
@@ -92,6 +101,7 @@ LoginForm.propTypes = {
   form: PropTypes.object.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   location: PropTypes.object.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
 };
 
 LoginForm.defaultProps = {
@@ -99,8 +109,9 @@ LoginForm.defaultProps = {
 };
 
 const mapStateToProps = (state) => {
-  const { auth: { logincode: { uid } } } = state;
+  const { auth: { isAuthenticated, logincode: { uid } } } = state;
   return {
+    isAuthenticated,
     uid,
   };
 };
@@ -110,4 +121,4 @@ const mapDispatchToProps = {
   logincodeRequest,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form.create()(LoginForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Form.create()(LoginForm)));
