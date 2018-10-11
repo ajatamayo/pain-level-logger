@@ -7,7 +7,11 @@ import { logoutRequest } from '../../actions/authActions';
 const LogoutButton = (props) => {
   const { isAuthenticated } = props;
   if (isAuthenticated) {
-    return <Tag onClick={props.logoutRequest}>Logout</Tag>;
+    return (
+      <div style={{ paddingTop: '80px' }}>
+        <Tag onClick={props.logoutRequest} style={{ marginRight: 0 }}>Logout</Tag>
+      </div>
+    );
   }
   return null;
 };

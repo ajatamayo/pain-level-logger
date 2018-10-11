@@ -15,7 +15,7 @@ export function* shortenUrlFlow({ url }) {
       success, longUrl, shortUrl, pk,
     } = response.data;
     if (success) {
-      yield put(appAlertSuccess('Success!'));
+      yield put(appAlertSuccess(`${longUrl} shortened! \\:D/`));
       yield put(shortenUrlSuccess(longUrl, shortUrl, pk));
     } else {
       yield put(shortenUrlFailure());

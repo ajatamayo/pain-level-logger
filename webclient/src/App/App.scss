@@ -1,10 +1,13 @@
 @import url(~antd/dist/antd.css);
 
 .app {
-  padding: 20vh 16px 24px;
-  max-width: 540px;
+  padding: 16vh 16px 24px;
   margin: 0 auto;
   text-align: center;
+
+  h1 {
+    margin-top: 20px;
+  }
 }
 
 body {

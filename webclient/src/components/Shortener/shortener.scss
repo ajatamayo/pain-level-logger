@@ -1,0 +1,32 @@
+.shortener-form.shortener-form {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.urls {
+  .long-url {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 40px;
+
+    .anticon {
+      font-size: 10px;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  .short-url {
+    display: inline-block;
+    min-width: 190px;
+    margin-right: 6px;
+
+    input {
+      font-size: 12px;
+    }
+  }
+
+  .ant-tag {
+    display: inline-block;
+  }
+}

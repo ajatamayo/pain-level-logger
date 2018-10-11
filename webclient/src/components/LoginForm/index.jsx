@@ -69,7 +69,8 @@ class LoginForm extends Component {
             ref={this.setEmailInputRef}
             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
             placeholder="you"
-            addonAfter={allowedEmailDomain}
+            addonAfter={`@${allowedEmailDomain}`}
+            style={{ maxWidth: '320px' }}
           />)}
         </FormItem>
         {this.props.uid && (
@@ -80,6 +81,7 @@ class LoginForm extends Component {
               ref={this.setCodeInputRef}
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
               placeholder="Paste your-temporary-login-code"
+              style={{ maxWidth: '320px' }}
             />)}
           </FormItem>
         )}

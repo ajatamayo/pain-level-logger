@@ -2,9 +2,11 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  Button, Form, Icon, Input,
+  Button, Form, Icon, Input, Tag, Tooltip,
 } from 'antd';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { shortenUrlRequest } from '../../actions/shortenerActions';
+import './shortener.css';
 
 const FormItem = Form.Item;
 
@@ -41,7 +43,7 @@ class Shortener extends Component {
     }
     return (
       <Fragment>
-        <Form onSubmit={this.handleSubmit} className="login-form">
+        <Form onSubmit={this.handleSubmit} className="shortener-form">
           <p>Enter a url to shorten :)</p>
           <FormItem>
             {getFieldDecorator('url', {
@@ -54,19 +56,34 @@ class Shortener extends Component {
             />)}
           </FormItem>
           <FormItem>
-            <Button type="primary" htmlType="submit" className="login-form-button">
+            <Button type="primary" htmlType="submit" className="shortener-form-button">
               Get shortlink!
             </Button>
           </FormItem>
         </Form>
-        {this.props.urlPairs.map(item => (
-          <p key={item.pk}>
-            {item.longUrl}
-            <Icon type="arrow-right" />
-            {item.shortUrl}
-            <Icon type="copy" />
-          </p>
-        ))}
+        <div className="urls">
+          {this.props.urlPairs.map(item => (
+            <div key={item.pk}>
+              <div className="long-url">
+                {item.longUrl}
+                <Icon type="arrow-right" />
+              </div>
+              <div className="short-url">
+                <Input readOnly value={item.shortUrl} />
+              </div>
+              <CopyToClipboard
+                text={item.shortUrl}
+              >
+                <Tooltip trigger="click" title={`Copied ${item.shortUrl} to clipboard!`}>
+                  <Tag>
+                    Copy link
+                    <Icon type="copy" />
+                  </Tag>
+                </Tooltip>
+              </CopyToClipboard>
+            </div>
+          ))}
+        </div>
       </Fragment>
     );
   }

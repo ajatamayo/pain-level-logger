@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Alert } from 'antd';
 import { appAlertClear } from '../../actions/appActions';
+import './appalert.css';
 
 class AppAlert extends Component {
   constructor(props) {
@@ -26,14 +27,16 @@ class AppAlert extends Component {
     if (this.props.message == null) return false;
 
     return (
-      <Alert
-        message={message || this.props.message}
-        type={alertType || this.props.alertType}
-        showIcon
-        banner
-        closable
-        afterClose={this.handleClose}
-      />
+      <div className="alert-wrapper">
+        <Alert
+          message={message || this.props.message}
+          type={alertType || this.props.alertType}
+          showIcon
+          banner
+          closable
+          afterClose={this.handleClose}
+        />
+      </div>
     );
   }
 }
