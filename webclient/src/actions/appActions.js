@@ -1,7 +1,7 @@
 import {
   APP_ALERT,
   APP_ALERT_CLEAR,
-} from '../actions/actionTypes';
+} from './actionTypes';
 
 export function appAlertSuccess(message) {
   return { type: APP_ALERT, message, alertType: 'success' };

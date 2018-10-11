@@ -4,7 +4,7 @@ import {
   LOGINCODE_REQUEST,
   LOGINCODE_SUCCESS,
   LOGOUT_REQUEST,
-} from '../actions/actionTypes';
+} from './actionTypes';
 
 export function loginRequest(code, uid) {
   return { type: LOGIN_REQUEST, code, uid };

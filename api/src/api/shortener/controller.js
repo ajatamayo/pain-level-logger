@@ -12,14 +12,16 @@ const shortener = async (req, res, next) => {
       return res.status(400).json({ success: false, message: 'The url parameter is required.' });
     }
     if (!validUrl.isUri(longUrl)) {
-      return res.status(400).json({ success: false, message: 'This is not a url.' });
+      return res.status(400).json({ success: false, message: 'This is not a url. Try appending http:// or https:// to your url. :)' });
     }
 
     let shortUrl = '';
+    let pk;
 
     const existingUrl = await Url.findOne({ longUrl });
     if (existingUrl) {
       shortUrl = `${config.urls.client}/${base58.encode(existingUrl.pk)}`;
+      ({ pk } = existingUrl);
     } else {
       let counter = await Counter.findOne({ key: 'urlCount' });
       if (!counter) {
@@ -29,9 +31,12 @@ const shortener = async (req, res, next) => {
       shortUrl = `${config.urls.client}/${base58.encode(newUrl.pk)}`;
       counter.seq += 1;
       counter.save();
+      ({ pk } = newUrl);
     }
 
-    return res.status(200).json({ shortUrl, longUrl });
+    return res.status(200).json({
+      success: true, shortUrl, longUrl, pk,
+    });
   } catch (error) {
     return next(new InternalServerError(error));
   }
