@@ -8,8 +8,8 @@ const { authorizationMiddleware } = require('./auth/middlewares');
 const router = express.Router();
 
 router.use('/auth', auth);
-router.use(authorizationMiddleware);
 router.use('/shortener', shortener);
+router.use(authorizationMiddleware);
 router.get('/protected', async (req, res) => res.status(200).json({ success: true, message: 'Protected!' }));
 router.use(errorHandler);
 

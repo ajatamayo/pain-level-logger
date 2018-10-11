@@ -42,6 +42,21 @@ const shortener = async (req, res, next) => {
   }
 };
 
+const decoder = async (req, res, next) => {
+  try {
+    const { encodedPk } = req.params;
+    const pk = base58.decode(encodedPk);
+    const urlDoc = await Url.findOne({ pk });
+    if (urlDoc) {
+      return res.status(200).json({ url: urlDoc.longUrl });
+    }
+    return res.status(200).json({ url: config.defaultRedirectUrl });
+  } catch (error) {
+    return next(new InternalServerError(error));
+  }
+};
+
 module.exports = {
   shortener,
+  decoder,
 };
