@@ -3,10 +3,10 @@ import {
   all, call, put, takeEvery,
 } from 'redux-saga/effects';
 
-import { SHORTEN_URL_REQUEST } from '../actions/actionTypes';
-import { shortenUrlSuccess, shortenUrlFailure } from '../actions/shortenerActions';
+import { SHORTEN_URL_REQUEST, DECODE_URL_REQUEST } from '../actions/actionTypes';
+import { shortenUrlSuccess, shortenUrlFailure, decodeUrlSuccess } from '../actions/shortenerActions';
 import { appAlertSuccess, appAlertError } from '../actions/appActions';
-import { shortenerService } from '../services/shortener';
+import { shortenerService, decoderService } from '../services/shortener';
 
 export function* shortenUrlFlow({ url }) {
   try {
@@ -28,9 +28,22 @@ export function* shortenUrlFlow({ url }) {
   }
 }
 
+export function* decodeUrlFlow({ encodedPk }) {
+  try {
+    const response = yield call(decoderService, { encodedPk });
+    const { url } = response.data;
+    yield put(decodeUrlSuccess(url));
+    yield call(() => { window.location.href = url; });
+  } catch (error) {
+    const message = get(error, 'response.data.message');
+    yield put(appAlertError(message || 'Oh no! Something went wrong. :((('));
+  }
+}
+
 export function* watchShortenerFlow() {
   yield all([
     takeEvery(SHORTEN_URL_REQUEST, shortenUrlFlow),
+    takeEvery(DECODE_URL_REQUEST, decodeUrlFlow),
   ]);
 }
 

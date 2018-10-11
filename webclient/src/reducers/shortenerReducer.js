@@ -2,11 +2,13 @@ import {
   SHORTEN_URL_REQUEST,
   SHORTEN_URL_SUCCESS,
   SHORTEN_URL_FAILURE,
+  DECODE_URL_SUCCESS,
 } from '../actions/actionTypes';
 
 const initialState = {
   urlPairs: [],
   isFetching: false,
+  redirectUrl: '',
 };
 
 function shortenerReducer(state = initialState, action) {
@@ -32,6 +34,11 @@ function shortenerReducer(state = initialState, action) {
       return {
         ...state,
         isFetching: false,
+      };
+    case DECODE_URL_SUCCESS:
+      return {
+        ...state,
+        redirectUrl: action.url,
       };
 
     default:

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import {
   AppAlert,
   Dashboard,
-  LogoutButton,
+  RedirectToUrl,
 } from '../components';
 import './App.css';
 
@@ -16,11 +16,9 @@ const App = () => (
   <div className="app">
     <AppAlert />
     <Switch>
+      <Route exact path="/:encodedPk" render={ownProps => <RedirectToUrl {...ownProps} />} />
       <Route exact path="/" render={ownProps => <Dashboard {...ownProps} />} />
     </Switch>
-    <div>
-      <LogoutButton />
-    </div>
   </div>
 );
 
