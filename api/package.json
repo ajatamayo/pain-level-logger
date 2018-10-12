@@ -39,7 +39,8 @@
   },
   "scripts": {
     "babel-node": "babel-node --presets=env",
-    "dev": "nodemon --exec yarn run babel-node ./src"
+    "dev": "nodemon --exec yarn run babel-node ./src",
+    "start": "yarn install && node ./src"
   },
   "babel": {
     "plugins": [

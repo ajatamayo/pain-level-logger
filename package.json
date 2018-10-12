@@ -12,6 +12,8 @@
     "prepClient": "cd ./webclient && yarn install",
     "runClient": "cd ./webclient && yarn start",
     "lintClient": "cd ./webclient && yarn run eslint .",
-    "startClient": "yarn prepClient && yarn runClient"
+    "startClient": "yarn prepClient && yarn runClient",
+    "start": "cd ./api && yarn start",
+    "heroku-postbuild": "cd ./webclient && yarn --production=false && yarn run build"
   }
 }
