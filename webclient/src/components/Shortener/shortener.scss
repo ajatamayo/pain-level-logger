@@ -1,32 +1,101 @@
+$maxWidth: 540px;
+$urlInputWidth: 420px;
+$bodyHorizontalPadding: 32px;
+
 .shortener-form.shortener-form {
-  max-width: 540px;
   margin: 0 auto;
+
+  &.ant-form-inline .ant-form-item {
+    margin-right: 0;
+  }
+
+  .url-input-form-item {
+    input {
+      border-color: #1890ff;
+    }
+  }
+
+  .shortener-form-button {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: 341px) {
+    .url-input-form-item {
+      input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+      }
+    }
+
+    .shortener-form-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  @media (min-width: $maxWidth + $bodyHorizontalPadding) {
+    .url-input-form-item {
+      .ant-form-item-control-wrapper {
+        width: $urlInputWidth;
+      }
+    }
+
+    .shortener-button-form-item {
+      .ant-form-item-control-wrapper {
+        width: $maxWidth - $urlInputWidth;
+      }
+    }
+  }
 }
 
 .urls {
-  .long-url {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 40px;
+  max-width: $maxWidth;
+  margin: 16px auto 0;
+  text-align: left;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.05);
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 24px;
 
-    .anticon {
-      font-size: 10px;
-      margin-left: 3px;
-      margin-right: 3px;
+  .url {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(gray, 0.2);
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
     }
+  }
+
+  .long-url {
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 300;
+    margin-bottom: 4px;
   }
 
   .short-url {
-    display: inline-block;
-    min-width: 190px;
-    margin-right: 6px;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
 
-    input {
-      font-size: 12px;
+    .display {
+      margin-right: 8px;
     }
-  }
 
-  .ant-tag {
-    display: inline-block;
+    button {
+      text-transform: uppercase;
+      font-size: 10px;
+
+      &.ant-btn > .anticon + span {
+        margin-left: 5px;
+        margin-right: 3px;
+      }
+    }
   }
 }

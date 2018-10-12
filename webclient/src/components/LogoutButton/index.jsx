@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Tag } from 'antd';
+import { Button } from 'antd';
 import { logoutRequest } from '../../actions/authActions';
 
 const LogoutButton = (props) => {
@@ -9,7 +9,13 @@ const LogoutButton = (props) => {
   if (isAuthenticated) {
     return (
       <div style={{ paddingTop: '80px' }}>
-        <Tag onClick={props.logoutRequest} style={{ marginRight: 0 }}>Logout</Tag>
+        <Button
+          onClick={props.logoutRequest}
+          style={{ marginRight: 0 }}
+          size="small"
+        >
+          Logout
+        </Button>
       </div>
     );
   }

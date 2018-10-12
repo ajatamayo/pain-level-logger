@@ -8,6 +8,7 @@ import {
 import qs from 'query-string';
 import { allowedEmailDomain } from '../../config';
 import { loginRequest, logincodeRequest } from '../../actions/authActions';
+import './loginform.css';
 
 const FormItem = Form.Item;
 
@@ -29,6 +30,12 @@ class LoginForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.emailInput) {
+      this.emailInput.focus();
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 
@@ -47,11 +54,6 @@ class LoginForm extends Component {
   }
 
   render() {
-    const { isAuthenticated } = this.props;
-    if (isAuthenticated) {
-      return null;
-    }
-
     const { code, uid } = qs.parse(this.props.location.search);
     if (code && uid) {
       this.props.loginRequest(code, uid);
@@ -62,26 +64,24 @@ class LoginForm extends Component {
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <p>{`Login using your ${allowedEmailDomain} email to use this service.`}</p>
-        <FormItem>
+        <FormItem className="email-form-item">
           {getFieldDecorator('email', {
             rules: [{ required: true, message: 'Please input your email!' }],
           })(<Input
             ref={this.setEmailInputRef}
-            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+            prefix={<Icon type="user" />}
             placeholder="you"
             addonAfter={`@${allowedEmailDomain}`}
-            style={{ maxWidth: '320px' }}
           />)}
         </FormItem>
         {this.props.uid && (
-          <FormItem>
+          <FormItem className="login-code-form-item">
             {getFieldDecorator('code', {
               rules: [{ required: true, message: 'Please input your login code!' }],
             })(<Input
               ref={this.setCodeInputRef}
-              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              prefix={<Icon type="lock" />}
               placeholder="Paste your-temporary-login-code"
-              style={{ maxWidth: '320px' }}
             />)}
           </FormItem>
         )}
@@ -103,7 +103,6 @@ LoginForm.propTypes = {
   form: PropTypes.object.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   location: PropTypes.object.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
 };
 
 LoginForm.defaultProps = {
@@ -111,9 +110,8 @@ LoginForm.defaultProps = {
 };
 
 const mapStateToProps = (state) => {
-  const { auth: { isAuthenticated, logincode: { uid } } } = state;
+  const { auth: { logincode: { uid } } } = state;
   return {
-    isAuthenticated,
     uid,
   };
 };
