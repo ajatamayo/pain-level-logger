@@ -109,7 +109,7 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "npm run build-css && react-scripts build",
     "build-css": "node-sass src/ -o src/",
     "eject": "react-scripts eject",
     "start": "npm-run-all --parallel watch-css start-js",
