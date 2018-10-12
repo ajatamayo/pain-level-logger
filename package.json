@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "AJ Tamayo",
   "license": "MIT",
+  "engines": {
+    "node": "9.11.2"
+  },
   "scripts": {
     "prepServer": "cd ./api && yarn install",
     "runServer": "cd ./api && yarn dev",
