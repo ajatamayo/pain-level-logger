@@ -3,7 +3,7 @@ require('dotenv').load();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
-const forceSSL = require('express-force-ssl');
+// const forceSSL = require('express-force-ssl');
 const morgan = require('morgan');
 const passport = require('passport');
 const path = require('path');
@@ -23,16 +23,16 @@ const limiter = new RateLimit({
 //  apply to all requests
 app.use(limiter);
 
-// Enforce SSL in production
-if (process.env.NODE_ENV === 'production') {
-  app.set('forceSSLOptions', {
-    enable301Redirects: true,
-    trustXFPHeader: false,
-    httpsPort: 443,
-    sslRequiredMessage: 'SSL Required.',
-  });
-  app.use(forceSSL);
-}
+// // Enforce SSL in production
+// if (process.env.NODE_ENV === 'production') {
+//   app.set('forceSSLOptions', {
+//     enable301Redirects: true,
+//     trustXFPHeader: false,
+//     httpsPort: 443,
+//     sslRequiredMessage: 'SSL Required.',
+//   });
+//   app.use(forceSSL);
+// }
 
 app.use(morgan('dev'));
 app.use(cors());
@@ -44,12 +44,12 @@ app.use('/api', apiRoot);
 
 if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React app
-  app.use(express.static(path.join(__dirname, '../../webclient/build')));
+  app.use(express.static(path.join(__dirname, '../webclient/build')));
 
   // The "catchall" handler: for any request that doesn't
   // match one above, send back React's index.html file.
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../webclient/build/index.html'));
+    res.sendFile(path.join(__dirname, '../webclient/build/index.html'));
   });
 }
 
