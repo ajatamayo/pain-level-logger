@@ -1,6 +1,6 @@
 # What's a URL Shortener?
 
- URL shortening is a technique to convert a long URL (site or page address) to a shorter version. This shorter version of the URL is usually cleaner and easier to share or remember. When someone accesses the shortened address, the browser redirects to the original (large) url address. It is also called URL redirection or URL redirect.
+URL shortening is a technique to convert a long URL (site or page address) to a shorter version. This shorter version of the URL is usually cleaner and easier to share or remember. When someone accesses the shortened address, the browser redirects to the original (large) url address. It is also called URL redirection or URL redirect.
 
 For example, the large version of this url:
 http://en.wikipedia.org/wiki/URL_shortening
@@ -20,11 +20,48 @@ You will also have short URLs since the number of URLs you can have is `58^n` wh
 
 # How to use this code?
 
-  ```
-  $ yarn init
-  ```
+To start the development server:
 
   ```
-  $ yarn startServer
-  $ yarn startClient
+  # from the project root
+  $ yarn dev
+  ```
+
+To start the webclient:
+
+  ```
+  $ cd webclient
+  $ yarn start
+  ```
+
+# Pre-deployment
+
+Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+  ```
+  # add the heroku git url as a remote called 'staging'
+  $ git remote add staging https://git.heroku.com/aqwire-url-shortener-staging.git
+
+  # add the heroku git url as a remote called 'production'
+  $ git remote add production https://git.heroku.com/aqwire-url-shortener.git
+  ```
+
+# Deploying
+
+Build static files for deployment
+
+  ```
+  $ cd webclient
+  $ yarn build
+  ```
+
+Commit the changes.
+
+  ```
+  # deploy the develop branch to staging server
+  # Heroku only accepts the master branch, hence we specify develop:master
+  $ git push staging develop:master
+
+  # or for the production server
+  $ git push production develop:master
   ```
