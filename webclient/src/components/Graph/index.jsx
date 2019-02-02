@@ -9,9 +9,7 @@ const DATE_FORMAT = 'YYYY-MM-DD';
 
 const Graph = () => {
   const groupedTweets = groupBy(tweets, tweet => tweet.created_at.slice(0, 10));
-  console.log(groupedTweets);
   const dates = Object.keys(groupedTweets).sort();
-  // console.log(dates);
   const firstDate = moment(dates[0], DATE_FORMAT);
   const lastDate = moment(dates[dates.length - 1], DATE_FORMAT);
   const monthCount = moment(lastDate).startOf('month').diff(moment(firstDate).startOf('month'), 'months') + 1;
