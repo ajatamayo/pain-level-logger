@@ -99,7 +99,7 @@ $graph-height: 253px;
   }
   .bars {
     height: $graph-height;
-    padding: 0 2%;
+    padding: 0;
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -119,7 +119,8 @@ $graph-height: 253px;
       height: 0;
       position: absolute;
       text-align: center;
-      width: 98%;
+      width: 70%;
+      margin-left: 15%;
       span {
        display: none;
       }
@@ -153,7 +154,7 @@ $graph-height: 253px;
     li {
       border-top: 1px solid #4e5464;
       display: block;
-      height: $graph-height/4;
+      height: $graph-height/5;
       width: 100%;
       span {
         display: block;
