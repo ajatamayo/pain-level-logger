@@ -122,7 +122,8 @@ $graph-height: 253px;
       width: 70%;
       margin-left: 15%;
       span {
-       display: none;
+        position: relative;
+        top: -21px;
       }
     }
     @for $i from 1 through 15 {

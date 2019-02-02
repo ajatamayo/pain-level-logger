@@ -27,11 +27,11 @@ const Graph = () => {
           ))}
         </ul>
         <ul className="y-axis">
-          <li><span>50</span></li>
           <li><span>40</span></li>
-          <li><span>30</span></li>
-          <li><span>20</span></li>
-          <li><span>10</span></li>
+          <li><span>32</span></li>
+          <li><span>24</span></li>
+          <li><span>16</span></li>
+          <li><span>8</span></li>
           <li><span>0</span></li>
         </ul>
         <div className="bars">
@@ -41,8 +41,8 @@ const Graph = () => {
             if (tweetsThisDay) {
               return (
                 <div key={i} className="bar-group" style={{ width: `${100 / daysCount}%` }}>
-                  <div className="bar bar-1 stat-1" style={{ height: `${100 * tweetsThisDay.length / 50}%` }}>
-                    <span>{thisDay}</span>
+                  <div className="bar bar-1 stat-1" style={{ height: `${100 * tweetsThisDay.length / 40}%` }}>
+                    <span>{tweetsThisDay.length}</span>
                   </div>
                 </div>
               );
