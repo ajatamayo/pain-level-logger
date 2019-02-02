@@ -1,0 +1,278 @@
+ [ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 33, 53 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "994003180340969472",
+  "text" : "16 seconds of 11 out of 10 pain. #TrigeminalNeuralgia",
+  "id" : 994003180340969472,
+  "created_at" : "2018-05-08 23:56:40 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 171, 191 ]
+    }, {
+      "text" : "FacialPain",
+      "indices" : [ 192, 203 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "993736161452412929",
+  "text" : "I move in my sleep and it threatens to surface. I freeze, awkwardly. Seconds seem like eternity. Finally, I can move again. A single tear falls, exhausted. I sleep again. #TrigeminalNeuralgia #FacialPain",
+  "id" : 993736161452412929,
+  "created_at" : "2018-05-08 06:15:38 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 23, 43 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "993305108589887489",
+  "text" : "Ok it's getting worse. #TrigeminalNeuralgia",
+  "id" : 993305108589887489,
+  "created_at" : "2018-05-07 01:42:47 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "993006832124772352",
+  "text" : "Yes. Just a 4 out of 10 though.",
+  "id" : 993006832124772352,
+  "created_at" : "2018-05-06 05:57:32 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "carbamazepine",
+      "indices" : [ 57, 71 ]
+    }, {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 92, 112 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991850340189257728",
+  "text" : "Oh hey. Would you look at that. No attacks this morning. #carbamazepine finally kicking in? #TrigeminalNeuralgia",
+  "id" : 991850340189257728,
+  "created_at" : "2018-05-03 01:22:03 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ {
+      "name" : "Trigeminal Neuralgia Association UK",
+      "screen_name" : "TN_UK",
+      "indices" : [ 0, 6 ],
+      "id_str" : "1630329996",
+      "id" : 1630329996
+    } ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "in_reply_to_status_id_str" : "991779971357200385",
+  "geo" : { },
+  "id_str" : "991850128683089920",
+  "in_reply_to_user_id" : 1630329996,
+  "text" : "@TN_UK Thank you. You don't know how much this means to me. \uD83D\uDE2D",
+  "id" : 991850128683089920,
+  "in_reply_to_status_id" : 991779971357200385,
+  "created_at" : "2018-05-03 01:21:13 +0000",
+  "in_reply_to_screen_name" : "TN_UK",
+  "in_reply_to_user_id_str" : "1630329996",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 46, 66 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991587444473524224",
+  "text" : "Drank some more water, and got a 5 out of 10. #TrigeminalNeuralgia",
+  "id" : 991587444473524224,
+  "created_at" : "2018-05-02 07:57:24 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 71, 91 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991571359519064064",
+  "text" : "I drank water and yes, I got an 11 out of 10 attack on the pain scale. #TrigeminalNeuralgia",
+  "id" : 991571359519064064,
+  "created_at" : "2018-05-02 06:53:29 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991507204522983424",
+  "text" : "Yes.",
+  "id" : 991507204522983424,
+  "created_at" : "2018-05-02 02:38:33 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991492247962116098",
+  "text" : "Yes",
+  "id" : 991492247962116098,
+  "created_at" : "2018-05-02 01:39:07 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "991124190378868736",
+  "text" : "Yes.",
+  "id" : 991124190378868736,
+  "created_at" : "2018-05-01 01:16:35 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]

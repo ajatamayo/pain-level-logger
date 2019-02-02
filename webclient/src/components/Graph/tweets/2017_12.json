@@ -1,0 +1,76 @@
+ [ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 40, 60 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "946550077752934400",
+  "text" : "Still getting woken up every morning by #TrigeminalNeuralgia",
+  "id" : 946550077752934400,
+  "created_at" : "2017-12-29 01:14:59 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 98, 118 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "945480651582476288",
+  "text" : "Been having 8 out of 10 attacks for the past week. It's getting worse, especially in the morning. #TrigeminalNeuralgia",
+  "id" : 945480651582476288,
+  "created_at" : "2017-12-26 02:25:28 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 70, 90 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "942187273486966784",
+  "text" : "Got woken up thrice this morning by full blown attacks courtesy of my #TrigeminalNeuralgia :(",
+  "id" : 942187273486966784,
+  "created_at" : "2017-12-17 00:18:45 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]

@@ -1,0 +1,159 @@
+[ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 35, 55 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1091257641957879808",
+  "text" : "Another 6 out of 10 while working. #TrigeminalNeuralgia",
+  "id" : 1091257641957879808,
+  "created_at" : "2019-02-01 08:51:11 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ {
+      "name" : "CGSMichelle",
+      "screen_name" : "HeartBravoFl",
+      "indices" : [ 0, 13 ],
+      "id_str" : "168501397",
+      "id" : 168501397
+    } ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "in_reply_to_status_id_str" : "1091004453237518336",
+  "geo" : { },
+  "id_str" : "1091237585492439040",
+  "in_reply_to_user_id" : 168501397,
+  "text" : "@HeartBravoFl How I wish I could. Thanks for the support. \u2764\uFE0F\u2764\uFE0F",
+  "id" : 1091237585492439040,
+  "in_reply_to_status_id" : 1091004453237518336,
+  "created_at" : "2019-02-01 07:31:29 +0000",
+  "in_reply_to_screen_name" : "HeartBravoFl",
+  "in_reply_to_user_id_str" : "168501397",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 68, 88 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1091237076857581570",
+  "text" : "I hate it when I just want to sing but when I do, I get hampered by #TrigeminalNeuralgia. A 6 out of 10.",
+  "id" : 1091237076857581570,
+  "created_at" : "2019-02-01 07:29:27 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1091169266211053568",
+  "text" : "That was a 5 out of 10.",
+  "id" : 1091169266211053568,
+  "created_at" : "2019-02-01 03:00:00 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 13, 33 ]
+    }, {
+      "text" : "FacialPain",
+      "indices" : [ 60, 71 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1091169187454627841",
+  "text" : "I sneeze and #TrigeminalNeuralgia ensues immediately after. #FacialPain",
+  "id" : 1091169187454627841,
+  "created_at" : "2019-02-01 02:59:41 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 31, 51 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1091148062506987521",
+  "text" : "Good morning to you to my dear #TrigeminalNeuralgia. A 4 out of 10.",
+  "id" : 1091148062506987521,
+  "created_at" : "2019-02-01 01:35:45 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]

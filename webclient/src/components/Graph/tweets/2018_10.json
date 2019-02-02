@@ -1,0 +1,26 @@
+ [ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 81, 101 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1057547303920123904",
+  "text" : "Yep. A 10 out of 10 which lasted about 30 seconds while eating lunch with Carlo. #TrigeminalNeuralgia",
+  "id" : 1057547303920123904,
+  "created_at" : "2018-10-31 08:18:20 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]

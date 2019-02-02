@@ -1,0 +1,73 @@
+ [ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 16, 36 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "876286636010622976",
+  "text" : "Got woken up by #TrigeminalNeuralgia again :(",
+  "id" : 876286636010622976,
+  "created_at" : "2017-06-18 03:53:09 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "874942158846939137",
+  "text" : "Seems to have stopped. \uD83D\uDE0A\uD83D\uDE0A",
+  "id" : 874942158846939137,
+  "created_at" : "2017-06-14 10:50:40 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 28, 48 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "872590525882290177",
+  "text" : "Just got woken up by an 11. #TrigeminalNeuralgia",
+  "id" : 872590525882290177,
+  "created_at" : "2017-06-07 23:06:07 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]

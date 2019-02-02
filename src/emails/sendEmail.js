@@ -7,6 +7,7 @@ const { getHtml } = require('./templates');
 
 const transporter = nodemailer.createTransport({
   service: 'Mailgun',
+  streamTransport: true,
   auth: {
     user: process.env.MAILGUN_USER,
     pass: process.env.MAILGUN_PASS,
@@ -36,7 +37,9 @@ function sendMail(options) {
       .sendMail(mailOpts)
       .then((info) => {
         // eslint-disable-next-line no-console
-        console.log(info);
+        console.log(info.envelope);
+        console.log(info.messageId);
+        info.message.pipe(process.stdout);
         return resolve(true);
       })
       .catch((err) => {

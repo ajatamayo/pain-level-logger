@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LoginForm from '../LoginForm';
+import Graph from '../Graph';
 import Shortener from '../Shortener';
 import LogoutButton from '../LogoutButton';
 
 const Dashboard = props => (
   <Fragment>
-    <h1>aqwi.re url shortener</h1>
+    <h1>history</h1>
     {props.isAuthenticated ? (
       <Fragment>
         <Shortener />
         <LogoutButton />
       </Fragment>
     ) : (
-      <LoginForm />
+      <Graph />
     )}
   </Fragment>
 );

@@ -1,0 +1,29 @@
+ [ {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003ETwitter for Android\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "TrigeminalNeuralgia",
+      "indices" : [ 103, 123 ]
+    }, {
+      "text" : "FacialPain",
+      "indices" : [ 124, 135 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "1034976736180547589",
+  "text" : "Been having 7 out of 10 attacks that only last half a second. Nothing big, but still a reminder of it. #TrigeminalNeuralgia #FacialPain",
+  "id" : 1034976736180547589,
+  "created_at" : "2018-08-30 01:30:57 +0000",
+  "user" : {
+    "name" : "aj",
+    "screen_name" : "didmyTNattack",
+    "protected" : false,
+    "id_str" : "786873216409014272",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/807781126680952832\/mrZBt6w-_normal.jpg",
+    "id" : 786873216409014272,
+    "verified" : false
+  }
+} ]
