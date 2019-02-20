@@ -87,7 +87,7 @@ $graph-height: 253px;
 //STYLES\
 #bar-chart {
   height: 380px;
-  width: 80%;
+  width: 1130px;
   position: relative;
   margin: 50px auto 0;
   * {
@@ -146,6 +146,12 @@ $graph-height: 253px;
     li {
       float: left;
       font-size: 11px;
+
+      span {
+        transform: rotateZ(-90deg) translateX(-8px) translateY(-6px);
+        display: block;
+        width: 50px
+      }
     }
   }
   .y-axis {
