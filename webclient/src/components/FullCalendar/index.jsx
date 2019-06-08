@@ -73,7 +73,7 @@ class FullCalendar extends Component {
             title={this.state.date ? this.state.date.format('LL') : null}
           >
             {this.state.date && (
-              <IconSlider min={0} max={10} handleChange={value => this.setState({ value })} />
+              <IconSlider min={0} max={11} handleChange={value => this.setState({ value })} />
             )}
           </Modal>
         </div>
