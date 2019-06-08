@@ -14,7 +14,7 @@ function getOptions(to, code, uid) {
 
   return {
     to,
-    subject: `Your temporary aqwi.re login code is "${code}"`,
+    subject: `Your temporary pain logger login code is "${code}"`,
     message: content,
   };
 }
