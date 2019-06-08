@@ -62,7 +62,7 @@ class LoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <p>{`Login to use this service.`}</p>
+        <p>Login to use this service. A temporary login code will be sent to your inbox for you to proceed.</p>
         <FormItem className="email-form-item">
           {getFieldDecorator('email', {
             rules: [{ required: true, message: 'Please input your email!' }],
