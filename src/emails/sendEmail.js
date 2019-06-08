@@ -1,26 +1,24 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
 const stripHtml = require('string-strip-html');
-const { defaultFromEmail } = require('../config');
 
+const config = require('../config');
 const { getHtml } = require('./templates');
 
 const transporter = nodemailer.createTransport({
-  service: 'Mailgun',
-  streamTransport: true,
-  auth: {
-    user: process.env.MAILGUN_USER,
-    pass: process.env.MAILGUN_PASS,
-  },
+  host: 'localhost',
+  port: 25,
+  secure: false,
+  dkim: config.emails.dkim,
 });
 
 function sendMail(options) {
   const logoPath = path.join(__dirname, 'logo.png');
 
   const defaults = {
-    from: defaultFromEmail,
-    subject: 'test subject',
-    message: '<b>test html message</b>',
+    from: '"AJ Tamayo" <aj@atamayo.io>',
+    subject: 'Hey!',
+    message: '<b>What\'s up?</b>',
     attachments: [{
       filename: 'logo.png',
       path: logoPath,
@@ -37,8 +35,7 @@ function sendMail(options) {
       .sendMail(mailOpts)
       .then((info) => {
         // eslint-disable-next-line no-console
-        console.log(info.envelope);
-        console.log(info.messageId);
+        console.log(info);
         info.message.pipe(process.stdout);
         return resolve(true);
       })

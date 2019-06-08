@@ -6,7 +6,6 @@ import {
   Form, Icon, Input, Button,
 } from 'antd';
 import qs from 'query-string';
-import { allowedEmailDomain } from '../../config';
 import { loginRequest, logincodeRequest } from '../../actions/authActions';
 import './loginform.css';
 
@@ -44,7 +43,7 @@ class LoginForm extends Component {
         const email = this.emailInput.input.value;
         const code = this.codeInput && this.codeInput.input.value;
         if (!this.props.uid) {
-          this.props.logincodeRequest(`${email}@${allowedEmailDomain}`);
+          this.props.logincodeRequest(email);
         } else {
           const { uid } = qs.parse(this.props.location.search);
           this.props.loginRequest(code, this.props.uid || uid);
@@ -63,15 +62,14 @@ class LoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <p>{`Login using your ${allowedEmailDomain} email to use this service.`}</p>
+        <p>{`Login to use this service.`}</p>
         <FormItem className="email-form-item">
           {getFieldDecorator('email', {
             rules: [{ required: true, message: 'Please input your email!' }],
           })(<Input
             ref={this.setEmailInputRef}
             prefix={<Icon type="user" />}
-            placeholder="you"
-            addonAfter={`@${allowedEmailDomain}`}
+            placeholder="you@example.com"
           />)}
         </FormItem>
         {this.props.uid && (

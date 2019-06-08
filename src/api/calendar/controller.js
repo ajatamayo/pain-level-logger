@@ -12,7 +12,7 @@ const toggleDay = async (req, res, next) => {
     }
 
     const thisDate = `${yyyy}${mm}${dd}`;
-    const conditions = { date: thisDate, user: { email: req.user.email } };
+    const conditions = { date: thisDate, user: req.user.email };
 
     const existing = await MarkedDay.findOne(conditions);
 
@@ -32,7 +32,7 @@ const toggleDay = async (req, res, next) => {
 
 const getDates = async (req, res, next) => {
   try {
-    const conditions = { user: { email: req.user.email } };
+    const conditions = { user: req.user.email };
 
     const days = await MarkedDay.find(conditions);
 

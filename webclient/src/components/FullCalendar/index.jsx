@@ -52,7 +52,7 @@ class FullCalendar extends Component {
   }
 
   handleOk() {
-    // this.setState({ modalVisible: false });
+    this.setState({ modalVisible: false });
     const [yyyy, mm, dd] = this.state.date.format('YYYY-MM-DD').split('-');
     this.props.toggleDayRequest({ yyyy, mm, dd }, this.state.value);
   }

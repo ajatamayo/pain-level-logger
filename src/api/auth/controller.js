@@ -1,6 +1,6 @@
 const { sendLoginCode } = require('../../emails');
 const { BaseError, InternalServerError } = require('../../errors/systemErrors');
-const { allowedEmailDomain, loginCodeExpiry } = require('../../config');
+const { loginCodeExpiry } = require('../../config');
 const {
   generateHash,
   compareCodes,
@@ -18,21 +18,16 @@ const sendCode = async (req, res, next) => {
     const randomCode = await generateCode();
     const { email } = req.body;
 
-    const idx = email.lastIndexOf('@');
-    if (idx > -1 && email.slice(idx + 1) === allowedEmailDomain) {
-      // true if the address ends with allowedEmailDomain
-      const encryptedCode = await generateHash(randomCode);
-      const loginCode = await LoginCode.create({ email, encryptedCode });
-      const displayName = email.split('@')[0];
-      let user = await User.findOne({ email });
-      if (!user) {
-        user = await User.create({ email, displayName });
-      }
-      sendLoginCode(email, randomCode, loginCode._id);
-      return res.status(200).json({ success: true, message: 'Success!', uid: loginCode._id });
+    const encryptedCode = await generateHash(randomCode);
+    const loginCode = await LoginCode.create({ email, encryptedCode });
+    const displayName = email.split('@')[0];
+    let user = await User.findOne({ email });
+    if (!user) {
+      user = await User.create({ email, displayName });
     }
-
-    return res.status(400).json({ success: false, message: `Only ${allowedEmailDomain} emails may use this service.` });
+    sendLoginCode(email, randomCode, loginCode._id);
+    console.log(randomCode);
+    return res.status(200).json({ success: true, message: 'Success!', uid: loginCode._id });
   } catch (error) {
     return next(new InternalServerError(error));
   }

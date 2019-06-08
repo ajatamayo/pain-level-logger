@@ -8,11 +8,9 @@ const markedDaySchema = mongoose.Schema(
       index: true,
     },
     user: {
-      email: {
-        type: String,
-        required: true,
-        index: true,
-      },
+      type: String,
+      required: true,
+      index: true,
     },
     value: {
       type: Number,

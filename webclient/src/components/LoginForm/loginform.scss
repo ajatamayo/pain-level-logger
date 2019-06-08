@@ -1,19 +1,5 @@
 .login-form {
-  .email-form-item {
-    input,
-    input::placeholder {
-      text-align: right;
-    }
-
-    .ant-input-group-wrapper {
-      max-width: 320px;
-    }
-  }
-
-  .login-code-form-item {
-    .ant-form-item-control {
-      max-width: 320px;
-      margin: 0 auto;
-    }
+  .ant-form-item-control {
+    max-width: 320px;
   }
 }
