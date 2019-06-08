@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import FullCalendar from '../FullCalendar';
 import LogoutButton from '../LogoutButton';
 import LoginForm from '../LoginForm';
+import NiceGraph from '../NiceGraph';
 
 const Dashboard = props => (
   <Fragment>
@@ -11,6 +12,7 @@ const Dashboard = props => (
     {props.isAuthenticated ? (
       <Fragment>
         <FullCalendar />
+        <NiceGraph />
         <LogoutButton />
       </Fragment>
     ) : (

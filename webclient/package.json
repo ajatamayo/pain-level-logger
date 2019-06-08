@@ -6,6 +6,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@nivo/line": "^0.58.0",
     "antd": "^3.10.0",
     "axios": "^0.18.0",
     "connected-react-router": "^4.5.0",
@@ -17,13 +18,13 @@
     "npm-run-all": "^4.1.3",
     "prop-types": "^15.6.2",
     "query-string": "^6.2.0",
-    "react": "^16.5.2",
+    "react": "16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.5.2",
+    "react-dom": "16.8.6",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "2.0.4",
+    "react-scripts": "2.1.8",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.2"
   },

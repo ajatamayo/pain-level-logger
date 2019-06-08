@@ -8,7 +8,7 @@ const LogoutButton = (props) => {
   const { isAuthenticated } = props;
   if (isAuthenticated) {
     return (
-      <div style={{ paddingTop: '80px' }}>
+      <div style={{ paddingTop: '20px' }}>
         <Button
           onClick={props.logoutRequest}
           style={{ marginRight: 0 }}
