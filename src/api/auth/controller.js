@@ -26,7 +26,6 @@ const sendCode = async (req, res, next) => {
       user = await User.create({ email, displayName });
     }
     sendLoginCode(email, randomCode, loginCode._id);
-    console.log(randomCode);
     return res.status(200).json({ success: true, message: 'Success!', uid: loginCode._id });
   } catch (error) {
     return next(new InternalServerError(error));
