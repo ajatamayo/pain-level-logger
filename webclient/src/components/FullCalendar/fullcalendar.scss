@@ -1,0 +1,22 @@
+.ant-fullcalendar-content.ant-fullcalendar-content {
+  bottom: -14px;
+  font-size: 17px;
+
+  .ant-fullcalendar-last-month-cell &,
+  .ant-fullcalendar-next-month-btn-day & {
+    display: none;
+  }
+}
+
+.ant-fullcalendar-value.ant-fullcalendar-value {
+  font-size: 10px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.25);
+  height: 39px;
+  width: 100%;
+
+  .ant-fullcalendar-last-month-cell &,
+  .ant-fullcalendar-next-month-btn-day & {
+    display: none;
+  }
+}

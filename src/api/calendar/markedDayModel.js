@@ -14,6 +14,10 @@ const markedDaySchema = mongoose.Schema(
         index: true,
       },
     },
+    value: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true,

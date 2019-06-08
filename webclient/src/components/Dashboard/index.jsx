@@ -2,13 +2,12 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FullCalendar from '../FullCalendar';
-import Shortener from '../Shortener';
 import LogoutButton from '../LogoutButton';
 import LoginForm from '../LoginForm';
 
 const Dashboard = props => (
   <Fragment>
-    <h1>good bad</h1>
+    <h1>tn pain log</h1>
     {props.isAuthenticated ? (
       <Fragment>
         <FullCalendar />

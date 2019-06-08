@@ -1,15 +1,17 @@
 import {
   TOGGLE_DAY_REQUEST,
   TOGGLE_DAY_SUCCESS,
+  GET_DATES_SUCCESS,
 } from '../actions/actionTypes';
 
 const initialState = {
-  dates: [],
+  dates: {},
   isFetching: false,
   fetched: false,
+  initialLoaded: false,
 };
 
-function shortenerReducer(state = initialState, action) {
+function calendarReducer(state = initialState, action) {
   switch (action.type) {
     case TOGGLE_DAY_REQUEST:
       return {
@@ -18,17 +20,21 @@ function shortenerReducer(state = initialState, action) {
       };
 
     case TOGGLE_DAY_SUCCESS: {
-      const { operation, date } = action;
-      let dates;
-      if (operation === 'added') {
-        // create clone of array
-        dates = [...state.dates, date];
-      } else {
-        dates = state.dates.filter(o => o === date);
-      }
+      const { date, value } = action;
+      const dates = Object.assign({}, state.dates, { [date]: value });
       return {
         ...state,
         dates,
+        isFetching: false,
+      };
+    }
+
+    case GET_DATES_SUCCESS: {
+      const { dates } = action;
+      return {
+        ...state,
+        dates,
+        initialLoaded: true,
       };
     }
 
@@ -37,4 +43,4 @@ function shortenerReducer(state = initialState, action) {
   }
 }
 
-export default shortenerReducer;
+export default calendarReducer;

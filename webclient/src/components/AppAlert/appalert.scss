@@ -1,5 +1,7 @@
 .alert-wrapper {
   max-width: 540px;
-  margin: 0 auto;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }

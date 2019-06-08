@@ -1,6 +1,10 @@
 import api from '../helpers/apiClient';
 
-// eslint-disable-next-line import/prefer-default-export
-export function toggleDayService({ yyyy, mm, dd }) {
-  return api.post(`/calendar/${yyyy}/${mm}/${dd}`);
+
+export function toggleDayService({ yyyy, mm, dd }, value) {
+  return api.post(`/calendar/${yyyy}/${mm}/${dd}`, { value });
+}
+
+export function getDatesService() {
+  return api.get('/calendar/get-dates');
 }
