@@ -60,7 +60,7 @@ class FullCalendar extends Component {
   render() {
     return (
       <div id="full-calendar">
-        <div style={{ width: 400, border: '1px solid #d9d9d9', borderRadius: 4 }}>
+        <div style={{ maxWidth: 400, border: '1px solid #d9d9d9', borderRadius: 4 }}>
           <Calendar
             fullscreen={false}
             onSelect={this.onSelect}

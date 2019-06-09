@@ -5,6 +5,8 @@ import { ResponsiveLine } from '@nivo/line';
 import { InputNumber } from 'antd';
 import './nicegraph.css';
 
+const DEFAULT_DAYS_TO_SHOW = 60;
+
 const enumerateDays = (startDate, endDate) => {
   if (!startDate || !endDate) return [];
 
@@ -30,13 +32,14 @@ class NiceGraph extends Component {
     super(props);
 
     this.state = {
-      daysToShow: 60,
+      daysToShow: DEFAULT_DAYS_TO_SHOW,
     };
 
     this.onChange = this.onChange.bind(this);
   }
 
-  onChange(value) {
+  onChange(newValue) {
+    const value = newValue || 0;
     this.setState({ daysToShow: value === 0 ? 0 : Math.max(value, 4) });
   }
 
@@ -47,8 +50,8 @@ class NiceGraph extends Component {
     const firstDate = datesList[0];
     const lastDate = datesList[datesList.length - 1];
     const allDates = enumerateDays(firstDate, lastDate);
-    const last6Months = allDates.slice(-this.state.daysToShow);
-    const formattedData = last6Months.map(d => ({ x: d, y: dates[d] || 0 }));
+    const datesToShow = allDates.slice(-this.state.daysToShow);
+    const formattedData = datesToShow.map(d => ({ x: d, y: dates[d] || 0 }));
     if (!formattedData.length) {
       return null;
     }
@@ -65,7 +68,7 @@ class NiceGraph extends Component {
       <Fragment>
         <div className="days-to-show">
           <span>Show the last</span>
-          <InputNumber min={10} defaultValue={60} onChange={this.onChange} size="large" />
+          <InputNumber min={10} defaultValue={DEFAULT_DAYS_TO_SHOW} onChange={this.onChange} size="large" />
           <span>days:</span>
         </div>
         <div style={{ height: 400 }}>
@@ -95,14 +98,7 @@ class NiceGraph extends Component {
               tickPadding: 5,
               tickRotation: 0,
             }}
-            pointSize={10}
-            pointColor={{ theme: 'background' }}
-            pointBorderWidth={2}
-            pointBorderColor={{ from: 'serieColor' }}
-            pointLabel="y"
-            pointLabelYOffset={-12}
-            useMesh
-            gridYValues={[0, 10]}
+            gridYValues={[0, 5, 10]}
             colors={['#1890ff']}
           />
         </div>
