@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": "9.11.2"
+    "node": "12.16.3"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

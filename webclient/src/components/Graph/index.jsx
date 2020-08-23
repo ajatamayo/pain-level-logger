@@ -8,8 +8,16 @@ import './graph.css';
 const DATE_FORMAT = 'YYYY-MM';
 
 const Graph = () => {
-  const groupedTweets = groupBy(tweets, tweet => tweet.created_at.slice(0, 7));
+  const groupedTweets = groupBy(tweets, tweet => tweet.created_at.slice(0, 10));
   const dates = Object.keys(groupedTweets).sort();
+  const out = [];
+  for (var i = 0; i < dates.length; i++) {
+    const date = dates[i];
+    out.push(date);
+    out.push(groupedTweets[date].map(t => t.text).join('\n'));
+    out.push('\n');
+  }
+  console.log(out.join('\n'));
   const firstDate = moment(dates[0], DATE_FORMAT);
   const lastDate = moment(dates[dates.length - 1], DATE_FORMAT);
   const monthCount = moment(lastDate).startOf('month').diff(moment(firstDate).startOf('month'), 'months') + 1;

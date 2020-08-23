@@ -24,3 +24,6 @@ yarn-error.log*
 *.notes
 
 /webclient/build/*
+
+/webclient/pain-app.yaml
+pain-api-app.yaml
