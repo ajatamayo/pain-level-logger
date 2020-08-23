@@ -5,8 +5,14 @@ const app = require('./app');
 // mongoose connection
 /* eslint-disable no-console */
 mongoose.set('useCreateIndex', true);
+
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
+
 mongoose
-  .connect(config.db.uri, { useNewUrlParser: true })
+  .connect(config.db.uri, options)
   .then(() => {
     console.log(`Connected to Mongodb: ${config.db.uri}`);
   })

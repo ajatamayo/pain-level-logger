@@ -28,5 +28,10 @@ module.exports = {
       keySelector: process.env.EMAIL_DKIM_KEY_SELECTOR || '',
       privateKey: process.env.EMAIL_DKIM_PRIVATE_KEY || '',
     },
+    from: '"Pain logger" <noreply@atamayo.io>',
+  },
+  mailgun: {
+    apikey: process.env.MAILGUN_API_KEY || '',
+    domain: process.env.MAILGUN_DOMAIN || '',
   },
 };
