@@ -28,7 +28,7 @@
     "public-ip": "^4.0.2",
     "string-strip-html": "^4.5.1",
     "valid-url": "^1.0.9",
-    "validator": "^13.1.1",
+    "validator": "^13.7.0",
     "xkcd-password": "^2.0.0"
   },
   "devDependencies": {
